@@ -11,7 +11,6 @@ import org.objectweb.asm.*
 class EPermissionClassVisitor(val classVisitor: ClassVisitor) : ClassVisitor(Opcodes.ASM7, classVisitor), Opcodes {
     lateinit var className: String
     override fun visitMethod(access: Int, name: String, descriptor: String?, signature: String?, exceptions: Array<out String>?): MethodVisitor {
-
         return EPermissionMethodVisitor(classVisitor,cv.visitMethod(access, name, descriptor, signature, exceptions), className, name);
     }
 
