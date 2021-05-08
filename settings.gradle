@@ -1,0 +1,4 @@
+include ':epermission'
+include ':epermission-plugin'
+include ':app'
+rootProject.name = "EPermissionDemo"

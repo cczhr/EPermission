@@ -1,0 +1,50 @@
+apply plugin: 'java-gradle-plugin'
+apply plugin: 'kotlin'
+apply plugin: 'maven'
+apply plugin: "com.gradle.plugin-publish"
+
+group='com.cczhr.epermission'
+version='1.0.0'
+
+
+
+pluginBundle {
+    website = 'https://github.com/cczhr/EPermission'
+    vcsUrl = 'https://github.com/cczhr/EPermission.git'
+    tags = ['Android', 'Gradle', 'plugin','Permission']
+}
+
+gradlePlugin {
+    plugins {
+        Jamplate {
+            id = 'com.cczhr.epermission'
+            displayName = 'EPermissionPlugin'
+            description = 'Easy to apply for android permission'
+            implementationClass = 'com.cczhr.epermission.EPermissionPlugin'
+        }
+    }
+}
+
+
+
+dependencies {
+    implementation gradleApi() //必须
+    implementation localGroovy() //必须
+    //如果要使用android的API，需要引用这个，实现Transform的时候会用到
+    implementation 'com.android.tools.build:gradle:4.1.1'
+    implementation 'org.ow2.asm:asm:7.1'
+    implementation 'org.ow2.asm:asm-commons:7.1'
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+repositories {
+    google()
+    jcenter()
+    mavenCentral()
+    maven {
+        url 'https://jitpack.io'
+    }
+}
+
