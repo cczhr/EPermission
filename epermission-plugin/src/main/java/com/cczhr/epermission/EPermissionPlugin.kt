@@ -55,8 +55,7 @@ class EPermissionPlugin : Plugin<Project> {
             }
 
         }
-        if (permissions.isNotEmpty())
-            appExtension.registerTransform(EPermissionTransform())
+        appExtension.registerTransform(EPermissionTransform())
 
 
     }
