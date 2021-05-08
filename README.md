@@ -1,4 +1,4 @@
-# 一行代码实现申请安卓应用权限
+# 一行代码实现申请android应用权限
 [![](https://jitpack.io/v/cczhr/EPermission.svg)](https://jitpack.io/#cczhr/EPermission)
 
 ## 使用说明
