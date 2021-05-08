@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() {
 ## 原理
 
 Gradle Plugin + ASM ~~获取合并后的Manifest文件再~~ 通过ASM写入字节码到标记的class文件中
-1.0.1没再使用合并后的Manifest文件写死在class文件上 改为使用代码的形式运行时获取权限
+(1.0.1没再使用合并后的Manifest文件写死在class文件上 改为使用代码的形式运行时获取权限)
 ```java
 String[] permissions = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_PERMISSIONS).requestedPermissions;
 ```
